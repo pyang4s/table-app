@@ -1,5 +1,5 @@
 {
-  "name": "agents_avisbudget",
+  "name": "able-app-e7e28",
   "version": "1.0.0",
   "description": "Avis Budget Agent List",
   "main": "index.js",
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/panhiay/agents_avisbudget.git"
+    "url": "git+https://github.com/panhiay/able-app-e7e28.git"
   },
   "author": "Panhia Yang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/panhiay/agents_avisbudget/issues"
+    "url": "https://github.com/panhiay/able-app-e7e28/issues"
   },
-  "homepage": "https://github.com/panhiay/agents_avisbudget#readme"
+  "homepage": "https://github.com/panhiay/able-app-e7e28#readme"
 }
