@@ -1,18 +1,19 @@
 import 'dart:convert';
 import 'dart:core';
+import 'package:test23/constants/strings.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:csv/csv.dart';
 
 downLoadTemplate() {
   List<List<String>> templateList = [];
   templateList = [<String>[
-    "Location",
-    "First Name",
-    "Last Name",
-    "Agent ID",
-    "Rentals CY",
-    "WFI/GTL Rentals",
-    "WFI/GTL Revenues",
+    locationHeader,
+    firstNameHeader,
+    lastNameHeader,
+    agentIdHeader,
+    availableRentals,
+    totalRented,
+    rentalRevenue,
     "Action",
     "Agent Ref Id"],
     [

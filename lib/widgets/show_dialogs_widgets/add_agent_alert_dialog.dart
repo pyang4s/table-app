@@ -44,7 +44,7 @@ class _AlertAddAgentState extends State<AlertAddAgent> {
   @override
   initState() {
     super.initState();
-    addLocation = "ABQ";
+    addLocation = "Denver, CO";
   }
 
   @override
@@ -142,7 +142,7 @@ class _AlertAddAgentState extends State<AlertAddAgent> {
                           controller: rentalsCyCtlr,
                           decoration: const InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'Rentals CY',
+                              labelText: 'Available Rentals',
                               labelStyle: TextStyle(fontSize: 12)
                           ),
                           style: const TextStyle(fontSize: 12),
@@ -157,7 +157,7 @@ class _AlertAddAgentState extends State<AlertAddAgent> {
                           controller: wfiGtlRentalsCtlr,
                           decoration: const InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'WFI/GTL Rentals',
+                              labelText: 'Total Rented',
                               labelStyle: TextStyle(fontSize: 12)
                           ),
                           style: const TextStyle(fontSize: 12),
@@ -172,7 +172,7 @@ class _AlertAddAgentState extends State<AlertAddAgent> {
                           controller: wfiGtlRevenuesCtlr,
                           decoration: const InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'WFI/GTL Revenues',
+                              labelText: 'Rental Revenue',
                               labelStyle: TextStyle(fontSize: 12)
                           ),
                           style: const TextStyle(fontSize: 12),

@@ -11,7 +11,7 @@ import 'download_error.dart';
 
 processCsvFile (BuildContext context){
 
-  List <String> header = ["Location", "First Name", "Last Name", "Agent ID", "Rentals CY", "WFI/GTL Rentals CY", "WFI/GTL Revenues CY", "Action", "Agent Ref ID"];
+  List <String> header = [locationHeader, firstNameHeader, lastNameHeader, agentIdHeader, availableRentals, totalRented, rentalRevenue, "Action", "Agent Ref ID"];
   String errorMsgToCsv = "";
   bool errorOccurred = false;
   List<List<dynamic>> agentList = [];
@@ -33,7 +33,7 @@ processCsvFile (BuildContext context){
   //Create a list of all agent ids & ref Ids from spreadsheet
   for (int row = 2; row <agentList.length; row++ ){
     agentIDCsv.add(agentList[row][3].toString());
-    print(agentIDCsv);
+    // print(agentIDCsv);
     if(agentList[row][8].toString().isEmpty){
       agentList[row][8] = defaultRefId;
       agentRefIDCsv.add(agentList[row][8].toString());
@@ -57,8 +57,10 @@ processCsvFile (BuildContext context){
     }
     //Condition for error: Check for location that is not in database
     if (locationArr.toString().toLowerCase().contains(agentList[row][0].toLowerCase().trim())){
-      //print(fromCsvList[row][0].toLowerCase().trim());
+      // print(fromCsvList[row][0].toLowerCase().trim());
     } else {
+      // print(header[0]);
+      print(fromCsvList[row][0].toLowerCase().trim());
       errorMsgToCsv += "${header[0]} is $notInLocationList. ";
       errorOccurred = true;
     }

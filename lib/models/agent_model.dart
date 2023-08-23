@@ -179,7 +179,6 @@ class AgentModel<T>{
 
     //add to array
     allAgents.insert(0, agentObj);
-
   }
 
   ///This method deletes the selected agent from firebase
@@ -196,7 +195,6 @@ class AgentModel<T>{
     print("Doc Ref: " + agentRefId + " Has been deleted");
 
     //update array so it reflects database: this way we don't have to read the database again for this session
-
     for (int i = 0; i < allAgents.length; i++) {
       if (allAgents[i].getAgentRefIdAsString() == agentRefId){
         allAgents.removeAt(i);

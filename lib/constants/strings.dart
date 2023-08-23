@@ -16,10 +16,10 @@ String firstNameHeader = "First Name";
 String lastNameHeader = "Last Name";
 String agentNameHeader = 'Agent Name';
 String agentIdHeader = "Agent ID";
-String rentalsCyHeader = "Rentals CY";
-String wfiGtlRentalsHeader = "WFI/GTL Rentals CY";
-String wfiGtlRevenuesHeader = "WFI/GTL Revenues (\$)";
-String penetrationRateHeader = "Penetration Rate (%)";
+String availableRentals = "Available Rentals";
+String totalRented = "Total Rented";
+String rentalRevenue = "Rental Revenue (\$)";
+String rentalRate = "Rental Rate (%)";
 
 // Alert dialog
 String errorMessage = '';
