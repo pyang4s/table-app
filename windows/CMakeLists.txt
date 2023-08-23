@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(able-app-e7e28 LANGUAGES CXX)
+project(table-app-e7e28 LANGUAGES CXX)
 
-set(BINARY_NAME "able-app-e7e28")
+set(BINARY_NAME "table-app-e7e28")
 
 cmake_policy(SET CMP0063 NEW)
 
