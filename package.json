@@ -1,0 +1,23 @@
+{
+  "name": "agents_avisbudget",
+  "version": "1.0.0",
+  "description": "Avis Budget Agent List",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panhiay/agents_avisbudget.git"
+  },
+  "author": "Panhia Yang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panhiay/agents_avisbudget/issues"
+  },
+  "homepage": "https://github.com/panhiay/agents_avisbudget#readme"
+}
