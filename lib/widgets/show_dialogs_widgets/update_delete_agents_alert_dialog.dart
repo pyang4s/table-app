@@ -27,8 +27,8 @@ class UpdateDeleteAlert extends StatefulWidget {
       this.rentalsCy,
       this.wfiGtlRentalsCy,
       this.wfiGtlRevenuesCy,
-      this.penetrationRate
-      ) ;
+      this.penetrationRate, {Key? key}
+      ) : super(key: key) ;
 
   @override
   State<UpdateDeleteAlert> createState() => _UpdateDeleteAlertState();
@@ -150,7 +150,7 @@ class _UpdateDeleteAlertState extends State<UpdateDeleteAlert> {
                             decoration:  InputDecoration(
                               border: const OutlineInputBorder(),
                               labelStyle: const TextStyle(fontSize: 12),
-                              labelText: rentalsCyHeader,
+                              labelText: availableRentals,
                             ),
                             style: const TextStyle(fontSize: 12),
                           ),
@@ -166,7 +166,7 @@ class _UpdateDeleteAlertState extends State<UpdateDeleteAlert> {
                             decoration:  InputDecoration(
                               border: const OutlineInputBorder(),
                               labelStyle: const TextStyle(fontSize: 12),
-                              labelText: wfiGtlRentalsHeader,
+                              labelText: totalRented,
                             ),
                             style: const TextStyle(fontSize: 12),
                           ),
@@ -181,7 +181,7 @@ class _UpdateDeleteAlertState extends State<UpdateDeleteAlert> {
                             decoration: InputDecoration(
                                 border: const OutlineInputBorder(),
                                 labelStyle: const TextStyle(fontSize: 12),
-                                labelText: wfiGtlRevenuesHeader
+                                labelText: rentalRevenue
                             ),
                             style: const TextStyle(fontSize: 12),
                           ),
@@ -282,7 +282,7 @@ class _UpdateDeleteAlertState extends State<UpdateDeleteAlert> {
                                         ),
                                         onPressed: (){
                                           agentObject.deleteAgent(agentObject.getAgentRefIdAsString());
-                                          context.read<HomePageProvider>().foundAllAgent();
+                                          //context.read<HomePageProvider>().foundAllAgent();
                                           showSnackBarSuccess(ScaffoldMessenger.of(context), 'Agent has been Deleted');
                                           Navigator.pop(context); // pop first time to close 2nd alert box
                                           Navigator.pop(context); //pop second time to close 1st alert box
@@ -343,7 +343,7 @@ updateAgent(BuildContext context){
       context.read<AgentStateProvider>().wfiGtlRentalsExceedsMessage();
     } else {
       if(int.parse(addWfiGtlRentalsCy) == int.parse(addRentalsCy)) {
-        addPenetrationRate = 0.00;
+        addPenetrationRate = 100.00;
       } else {
         addPenetrationRate = (int.parse(addWfiGtlRentalsCy)/int.parse(addRentalsCy))*100;
       }

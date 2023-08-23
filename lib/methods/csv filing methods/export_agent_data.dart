@@ -1,12 +1,13 @@
 import 'dart:convert';
 import 'package:csv/csv.dart';
 import 'package:intl/intl.dart';
+import 'package:test23/constants/strings.dart';
 import '../../constants/global_variables.dart';
 import 'package:universal_html/html.dart' as html;
 
 
 void exportAgentData() {
-  itemList = [<String>["Location", "First Name", "Last Name", "Agent ID", "Rentals CY", "WFI/GTL Rentals", "WFI/GTL Revenues", "Penetration Rate(%)", "Agent Ref Id"]];
+  itemList = [<String>[locationHeader, firstNameHeader, lastNameHeader, agentIdHeader, availableRentals, totalRented, rentalRevenue, rentalRate, "Agent Ref Id"]];
   itemList.add(["Agent's location",
     "Agent's first name",
     "Agent's last name",
@@ -14,7 +15,7 @@ void exportAgentData() {
     "Number",
     "Number",
     "Currency",
-    "WFI/GTL Rentals / Rentals CY",
+    "Available / Rented",
     "Agent's id in the database"]);
 
   for (int i = 0; i < foundAgents.length; i++){

@@ -28,5 +28,6 @@ pickCsvFile(BuildContext context) async {
   //print(file.size);
   //print(file.bytes!);
   // Send bytes to be read
-  readCsvFile(file.bytes!);
+  context.read<BulkUpdatesProvider>().setFileBytes(file.bytes);
+  readCsvFile(context.read<BulkUpdatesProvider>().fileBytes);
 }
