@@ -1,18 +1,19 @@
 import 'dart:convert';
 import 'dart:core';
+import 'package:test23/constants/strings.dart';
 import 'package:universal_html/html.dart' as html;
 import 'package:csv/csv.dart';
 
 downLoadTemplate() {
   List<List<String>> templateList = [];
   templateList = [<String>[
-    "Location",
-    "First Name",
-    "Last Name",
-    "Agent ID",
-    "Rentals CY",
-    "WFI/GTL Rentals",
-    "WFI/GTL Revenues",
+    locationHeader,
+    firstNameHeader,
+    lastNameHeader,
+    agentIdHeader,
+    availableRentals,
+    totalRented,
+    rentalRevenue,
     "Action",
     "Agent Ref Id"],
     [
@@ -23,8 +24,8 @@ downLoadTemplate() {
       "Number",
       "Number",
       "Currency",
-      "Add | Update | Delete",
-      "Agent's id in the database"
+      "Enter into the cell: Add, Update, or Delete",
+      "Agent's id in the database. Leave blank if not exported from webpage"
     ]];
 
   String csvData = const ListToCsvConverter().convert(templateList);

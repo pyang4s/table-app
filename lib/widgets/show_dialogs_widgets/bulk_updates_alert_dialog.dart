@@ -24,6 +24,8 @@ class _ImportDataState extends State<ImportData> {
   }
   @override
   Widget build(BuildContext context) {
+    const errorText = "";
+
     return AlertDialog(
       content: SizedBox(
           height: 185,
@@ -79,7 +81,9 @@ class _ImportDataState extends State<ImportData> {
                           primary: Colors.blue,
                         ),
                         onPressed: (){
-                          processCsvFile(context);
+                          print("uploading csv file");
+                          var fileName = context.read<BulkUpdatesProvider>().fileName;
+                          fileName == "" ? context.read<BulkUpdatesProvider>().setNoFileLoadedErrorMessage(): processCsvFile(context);
                         },
                         child: const Text("Submit")),
                     const Spacer(),
