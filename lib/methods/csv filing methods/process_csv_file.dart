@@ -18,6 +18,7 @@ processCsvFile (BuildContext context){
   int countDup = 0;
   List<String> agentIDCsv = [];
   List<String> agentRefIDCsv = [];
+  List<List<dynamic>> errorCsv = agentList;
 
   for (var row in fromCsvList){
     if (row.isNotEmpty){
@@ -25,14 +26,14 @@ processCsvFile (BuildContext context){
     }
   }
 
-  List<List<dynamic>> errorCsv = agentList;
   errorCsv[0].add(addErrorToColumn);
+  // agentIDCsv.clear();
+  // agentRefIDCsv.clear();
 
-  agentIDCsv.clear();
-  agentRefIDCsv.clear();
   //Create a list of all agent ids & ref Ids from spreadsheet
   for (int row = 2; row <agentList.length; row++ ){
     agentIDCsv.add(agentList[row][3].toString());
+    print(agentIDCsv);
     if(agentList[row][8].toString().isEmpty){
       agentList[row][8] = defaultRefId;
       agentRefIDCsv.add(agentList[row][8].toString());
@@ -40,6 +41,7 @@ processCsvFile (BuildContext context){
       agentRefIDCsv.add(agentList[row][8].toString());
     }
   }
+
 
 
   // Check for errors

@@ -1,5 +1,5 @@
 //title of web app
-String title = "AvisBudget Agent List";
+String title = "Rental Sales Records";
 
 //doc names
 String locationDoc = 'location';
